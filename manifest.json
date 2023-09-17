@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "ChatGPT ClipGenius",
+    "version": "1.0",
+    "description": "Converts copied text from chat.openai.com from Markdown to Rich Text.",
+    "permissions": ["activeTab", "clipboardWrite", "clipboardRead"],
+    "content_scripts": [
+        {
+            "matches": ["https://chat.openai.com/*"],
+            "js": ["marked.min.js", "content.js"]
+        }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+}
